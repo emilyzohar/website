@@ -23,6 +23,17 @@ const SITE_CONFIG = {
       url: "#",
       type: "journal-article"
     }
+  ],
+
+    publicationAwards: [
+    {
+      title: "Effort norms encourage more exertion but not less",
+      label: "UTSC Psychology Best Paper Award 2026"
+    },
+    {
+      title: "On top of the hour: Preference for scheduling and starting tasks at the beginning of the hour",
+      label: "CPA Best Article Award 2025"
+    }
   ]
 };
 
@@ -240,6 +251,16 @@ function normalizeTitleForDeduplication(title) {
     .trim();
 }
 
+function getPublicationAward(publication) {
+  const publicationTitle = normalizeTitleForDeduplication(publication.title);
+
+  const award = SITE_CONFIG.publicationAwards.find((awardItem) => {
+    return normalizeTitleForDeduplication(awardItem.title) === publicationTitle;
+  });
+
+  return award ? award.label : "";
+}
+
 function isPreprint(publication) {
   const type = String(publication.type || "").toLowerCase();
   const journal = String(publication.journal || "").toLowerCase();
@@ -417,11 +438,16 @@ function renderPublications(publications) {
 
     const safeTitle = escapeHtml(publication.title);
     const formattedAuthors = formatAuthorsWithBoldEmily(
-  publication.authors || "Authors unavailable"
-);
+      publication.authors || "Authors unavailable"
+    );
     const safeDate = escapeHtml(publication.date || publication.year);
     const safeJournal = escapeHtml(publication.journal);
     const safeUrl = escapeHtml(publication.url || "#");
+
+    const awardLabel = getPublicationAward(publication);
+    const awardBadge = awardLabel
+      ? `<div class="publication-award-badge">${escapeHtml(awardLabel)}</div>`
+      : "";
 
     const statusLabel = isPreprint(publication) ? "Preprint" : "Published";
 
@@ -431,14 +457,18 @@ function renderPublications(publications) {
         : `<span class="article-link unavailable">Link unavailable</span>`;
 
     card.innerHTML = `
+     
       <h2>${safeTitle}</h2>
       <p class="publication-authors">${formattedAuthors}</p>
       <p class="publication-meta">${safeDate} · ${statusLabel}</p>
       <p class="publication-journal">${safeJournal}</p>
+      
       <div class="publication-spacer"></div>
+       ${awardBadge}
       <div class="card-actions single-action">
         ${articleLink}
       </div>
+      
     `;
 
     carousel.appendChild(card);
