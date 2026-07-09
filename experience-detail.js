@@ -1,4 +1,12 @@
 const EXPERIENCE_DETAILS = {
+  uoft: {
+    title: "Work and Play Lab, University of Toronto",
+    role: "PhD Student",
+    dates: "2023–present",
+    body:
+      "• PhD student researching effort willingness under the supervision of Michael Inzlicht.",
+    link: "https://michaelinzlicht.com/"
+  },
   beworks: {
     title: "BEworks",
     role: "Research Consultant",

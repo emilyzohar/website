@@ -554,7 +554,24 @@ function closeModal() {
   }
 }
 
+function isMobileScreen() {
+  return window.matchMedia("(max-width: 850px)").matches;
+}
+
 document.querySelectorAll(".logo-button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const detailId = button.dataset.detailId;
+
+    if (isMobileScreen() && detailId) {
+      window.location.href = `experience-detail.html?id=${encodeURIComponent(detailId)}`;
+      return;
+    }
+
+    openModalFromElement(button);
+  });
+});
+
+document.querySelectorAll(".media-logo-button").forEach((button) => {
   button.addEventListener("click", () => openModalFromElement(button));
 });
 
