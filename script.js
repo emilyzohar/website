@@ -1,5 +1,6 @@
 const SITE_CONFIG = {
   name: "Emily Zohar",
+  ownerName: "Emily Zohar",
   orcidId: "0009-0006-5490-4306",
   maxPublications: 8,
 
@@ -59,6 +60,55 @@ if (modalBackdrop) {
 
 if (modalLink) {
   modalLink.hidden = true;
+}
+
+function getPublicationYearNumber(publication) {
+  const year = Number.parseInt(publication.year, 10);
+  return Number.isNaN(year) ? 0 : year;
+}
+
+function isOwnerFirstAuthor(publication) {
+  const authors = String(publication.authors || "")
+    .split(",")
+    .map((author) => normalizeAuthorName(author))
+    .filter(Boolean);
+
+  if (!authors.length) return false;
+
+  const owner = normalizeAuthorName(SITE_CONFIG.ownerName);
+
+  return authors[0] === owner;
+}
+
+function sortPublications(publications) {
+  return publications.sort((a, b) => {
+    const rankA = publicationStatusRank(a);
+    const rankB = publicationStatusRank(b);
+
+    // 1. Published before preprints/other work
+    if (rankA !== rankB) {
+      return rankA - rankB;
+    }
+
+    // 2. Newer years first
+    const yearA = getPublicationYearNumber(a);
+    const yearB = getPublicationYearNumber(b);
+
+    if (yearA !== yearB) {
+      return yearB - yearA;
+    }
+
+    // 3. First-author papers first within same status/year
+    const firstAuthorA = isOwnerFirstAuthor(a) ? 1 : 0;
+    const firstAuthorB = isOwnerFirstAuthor(b) ? 1 : 0;
+
+    if (firstAuthorA !== firstAuthorB) {
+      return firstAuthorB - firstAuthorA;
+    }
+
+    // 4. Alphabetical fallback
+    return String(a.title || "").localeCompare(String(b.title || ""));
+  });
 }
 
 function escapeHtml(value) {
@@ -313,23 +363,15 @@ async function convertOrcidWorksToPublications(orcidJson, orcidId) {
 
   const deduplicated = deduplicatePublications(publications);
 
-  deduplicated.sort((a, b) => {
-    const rankA = publicationStatusRank(a);
-    const rankB = publicationStatusRank(b);
+  // Fetch authors before sorting, because first-author status depends on authors.
+  const publicationsWithAuthors = await addAuthorsFromDetailedOrcidRecords(
+    deduplicated,
+    orcidId
+  );
 
-    if (rankA !== rankB) {
-      return rankA - rankB;
-    }
+  const sorted = sortPublications(publicationsWithAuthors);
 
-    const yearA = Number.parseInt(a.year, 10) || 0;
-    const yearB = Number.parseInt(b.year, 10) || 0;
-
-    return yearB - yearA;
-  });
-
-  const limitedPublications = deduplicated.slice(0, SITE_CONFIG.maxPublications);
-
-  return await addAuthorsFromDetailedOrcidRecords(limitedPublications, orcidId);
+  return sorted.slice(0, SITE_CONFIG.maxPublications);
 }
 
 function normalizeAuthorName(name) {
@@ -556,3 +598,25 @@ if (pubRight && carousel) {
 }
 
 loadOrcidPublications();
+
+const mediaCarousel = document.querySelector("#media-carousel");
+const mediaLeft = document.querySelector("#media-left");
+const mediaRight = document.querySelector("#media-right");
+
+if (mediaLeft && mediaCarousel) {
+  mediaLeft.addEventListener("click", () => {
+    mediaCarousel.scrollBy({
+      left: -320,
+      behavior: "smooth"
+    });
+  });
+}
+
+if (mediaRight && mediaCarousel) {
+  mediaRight.addEventListener("click", () => {
+    mediaCarousel.scrollBy({
+      left: 320,
+      behavior: "smooth"
+    });
+  });
+}
