@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Emily Zohar</title>
+  <meta
+    name="description"
+    content="Personal academic website for Emily Zohar, PhD student in Experimental Social Psychology."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#research">About</a>
+      <span>|</span>
+      <a href="#publications">Publications</a>
+      <span>|</span>
+      <a href="#experience">Experience</a>
+      <span>|</span>
+      <a href="#skills">Skills</a>
+      <span>|</span>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+<section id="about" class="hero section">
+  <div class="hero-inner">
+    <p class="hero-text">
+      <span class="hero-line">
+        I’m Emily, a PhD student in Experimental Social Psychology. Studying
+      </span>
+      <span class="hero-line">
+        individuals’ willingness to exert effort.
+      </span>
+    </p>
+
+    <div class="signature-wrap">
+      <img
+        src="assets/signature.png"
+        alt="Emily Zohar signature"
+        class="signature-img"
+      />
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="hero-contact-bar" aria-label="Quick links">
+  <a href="mailto:emily.zohar@mail.utoronto.ca">emily.zohar@mail.utoronto.ca</a>
+  <span>|</span>
+  <a href="https://www.linkedin.com/in/emily-zohar" target="_blank" rel="noopener">LinkedIn</a>
+  <span>|</span>
+  <a href="https://scholar.google.ca/citations?user=VHZdUoMAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a>
+  <span>|</span>
+  <a href="assets/cv.pdf" target="_blank" rel="noopener">CV</a>
+</section>
+
+ <section id="research" class="research section">
+  <div class="content-wrap">
+    <h1>About</h1>
+
+    <div class="about-layout">
+      <div class="about-text">
+        <p>
+          I am a PhD student in Experimental Social Psychology at the University of Toronto. 
+          My research focuses on the psychology of effort: how people perceive effort, when 
+          they avoid it, when they embrace it, and how social and technological contexts shape 
+          their willingness to do hard things.
+        </p>
+
+        <p>
+          My work examines effort norms, effort normalization, mindsets about the negative 
+          feelings of effort, and the cues people use to judge effort in others. I also study 
+          how emerging technologies, including AI, may change how willing people are to think, 
+          persist, and work, as well as how everyday environments such as offices shape 
+          anticipated and objective productivity.
+        </p>
+      </div>
+
+      <article class="headshot-card">
+        <img
+          src="assets/headshot.jpg"
+          alt="Headshot of Emily Zohar"
+          class="headshot-img"
+        />
+      </article>
+    </div>
+  </div>
+</section>
+
+    <section id="publications" class="publications section">
+      <div class="content-wrap">
+        <div class="section-heading-row">
+          <h1>Recent Publications</h1>
+          <p id="orcid-status" class="orcid-status"></p>
+        </div>
+
+        <div class="publication-carousel-shell">
+          <button class="carousel-arrow left" id="pub-left" aria-label="Scroll publications left">
+            ‹
+          </button>
+
+          <div class="publication-carousel" id="publication-carousel" tabindex="0">
+            <!-- Publications are inserted by script.js -->
+          </div>
+
+          <button class="carousel-arrow right" id="pub-right" aria-label="Scroll publications right">
+            ›
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="experience section">
+      <div class="content-wrap">
+        <div class="logo-row">
+          <button
+            class="logo-button"
+            data-modal-title="BEworks"
+            data-modal-body="• Conducted literature reviews and evidence syntheses for consulting teams across private and public sector engagements.&#10;&#10;• Supported senior strategists and associates on think tank and client projects, translating behavioural science evidence into practical recommendations.&#10;&#10;• Designed and delivered MURAL-based digital workshops for internal and external clients; built and deployed surveys in Qualtrics.&#10;&#10;• Independently developed an Information Presentation Best Practices resource that was adopted organization-wide and considered for external commercialization."
+            data-modal-role="Consulting & Applied Behavioural Science Experience"
+            data-modal-dates="2022-2023"
+            data-modal-link="https://beworks.com/"
+          >
+            <img
+              src="assets/beworks.png"
+              alt="BEworks logo"
+              onerror="this.style.display='none'; this.parentElement.querySelector('.logo-fallback').style.display='block';"
+            />
+            <span class="logo-fallback">BEworks</span>
+          </button>
+
+          <button
+            class="logo-button"
+            data-modal-title="Behavior Change for Good"
+            data-modal-body="• Led an arm of a large-scale, multi-year research initiative focused on designing interventions that change behaviour for the public good.&#10;&#10;• Designed intervention teaching first-year undergraduates how to use their calendars more effectively grounded in goal setting best practices theory.&#10;&#10;• The calendaring intervention was selected as the sole intervention included in the 2024 pilot."
+            data-modal-role="Mega Study"
+            data-modal-dates="2023-present"
+            data-modal-link="https://bcfg.wharton.upenn.edu/"
+          >
+            <img
+              src="assets/behavior-change-for-good.png"
+              alt="Behavior Change for Good logo"
+              onerror="this.style.display='none'; this.parentElement.querySelector('.logo-fallback').style.display='block';"
+            />
+            <span class="logo-fallback">Behavior Change for Good</span>
+          </button>
+        </div>
+      </div>
+    </section>
+<section id="skills" class="skills section">
+  <div class="content-wrap">
+    <div class="skills-header">
+      <h1>Skills</h1>
+    </div>
+
+    <div class="skills-grid">
+      <article class="skill-card">
+        <h2>Coding & Research Tools</h2>
+        <p>
+          R | JavaScript | jsPsych | Python | SQL | Git | Unix Shell | Qualtrics
+        </p>
+          Data Sciences Institute Certificate — University of Toronto
+      </article>
+
+      <article class="skill-card">
+        <h2>Information Presentation</h2>
+        <p>
+          Canva | PowerPoint | Wix | Squarespace | Notion
+        </p>
+        <a href="assets/user-experience.pdf" target="_blank" rel="noopener">
+          User Experience Research and Design Specialization — University of Michigan
+        </a>
+      </article>
+
+      <article class="skill-card">
+        <h2>Teaching</h2>
+        <p>
+          Judgment & Decision-Making | Intro to Social Psychology | Methods in 
+          Psychological Science | Social Psychology Lab | Social Cognition
+        </p>
+        <a href="assets/Nudges.pdf" target="_blank" rel="noopener">
+          Lecture on Nudges
+        </a>
+      </article>
+
+      <article class="skill-card">
+        <h2>Outreach & Service</h2>
+        <p>
+          Social Personality Research Group Coordinator | UofT Chief Presiding Officer | 
+          Psychology Graduate Association Webmaster
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+  
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Emily Zohar. Last updated <span id="last-updated"></span>.</p>
+  </footer>
+
+  <div class="modal-backdrop" id="modal-backdrop" hidden>
+    <div
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+      aria-describedby="modal-body"
+    >
+      <button class="modal-close" id="modal-close" aria-label="Close popup">×</button>
+      <p class="modal-role" id="modal-role"></p>
+      <h1 id="modal-title"></h1>
+      <p class="modal-dates" id="modal-dates"></p>
+      <p id="modal-body"></p>
+      <a id="modal-link" href="#" target="_blank" rel="noopener" hidden>Visit website</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
