@@ -2,7 +2,7 @@ const SITE_CONFIG = {
   name: "Emily Zohar",
   ownerName: "Emily Zohar",
   orcidId: "0009-0006-5490-4306",
-  maxPublications: 8,
+  maxPublications: 20,
 
   fallbackPublications: [
     {
