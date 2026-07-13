@@ -177,7 +177,7 @@ h2 {
 
 .hero-contact-bar a:hover,
 .hero-contact-bar a:focus {
-  text-decoration: underline;
+  color: #aac1de;
 }
 
 .hero-contact-bar span {
@@ -534,7 +534,7 @@ h2 {
 
 .article-link:hover,
 .article-link:focus {
-  text-decoration: underline;
+  color: #ad2931;
 }
 
 .article-link.unavailable {
@@ -626,14 +626,14 @@ h2 {
 }
 
 .logo-button::after {
-  content: "Click for details";
+  content: "details";
   position: absolute;
   left: 50%;
   bottom: -10px;
   transform: translateX(-50%) translateY(6px);
-  color: var(--muted);
+  color: var(--signature-blue);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 15px;
+  font-size: 12px;
   font-style: italic;
   white-space: nowrap;
   opacity: 0;
