@@ -599,10 +599,13 @@ h2 {
 
 .logo-button {
   appearance: none;
+  position: relative;
+  display: inline-block;
   border: 0;
   background: transparent;
   padding: 0;
   cursor: pointer;
+  transition: transform 180ms ease;
 }
 
 .logo-button img {
@@ -610,6 +613,7 @@ h2 {
   max-width: 280px;
   max-height: 90px;
   object-fit: contain;
+  transition: opacity 180ms ease;
 }
 
 .logo-fallback {
@@ -619,26 +623,35 @@ h2 {
   font-weight: bold;
 }
 
-.logo-button:hover,
-.logo-button:focus {
-  transform: translateY(-15px);
-  opacity: 0.9;
-}
-
 .logo-button::after {
   content: "details";
   position: absolute;
   left: 50%;
-  bottom: -10px;
-  transform: translateX(-50%) translateY(6px);
+  top: 50%;
+  transform: translate(-50%, -50%);
   color: var(--signature-blue);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 12px;
+  font-size: 15px;
   font-style: italic;
   white-space: nowrap;
   opacity: 0;
-  transition: opacity 180ms ease, transform 180ms ease;
+  transition: opacity 180ms ease;
   pointer-events: none;
+}
+
+.logo-button:hover,
+.logo-button:focus-visible {
+  transform: translateY(-5px);
+}
+
+.logo-button:hover img,
+.logo-button:focus-visible img {
+  opacity: 0.08;
+}
+
+.logo-button:hover::after,
+.logo-button:focus-visible::after {
+  opacity: 1;
 }
 
 .logo-button:hover::after,
