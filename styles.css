@@ -810,7 +810,7 @@ h2 {
 .detail-back-button {
   display: inline-block;
   margin-bottom: 28px;
-  color: var(--signature-blue);
+  color: var(--signature-blue); 
   font-size: 18px;
   text-decoration: none;
 }
