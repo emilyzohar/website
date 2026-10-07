@@ -1,345 +1,796 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
+
   <title>Emily Zohar</title>
+
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-<link rel="stylesheet" href="styles.css" />
+
+
+
+
 
   <meta
+
     name="description"
+
     content="Personal academic website for Emily Zohar, PhD student in Experimental Social Psychology."
+
   />
 
+
+
   <link rel="stylesheet" href="styles.css" />
+
 </head>
 
+
+
 <body>
+
   <header class="site-header">
+
     <nav class="nav" aria-label="Primary navigation">
+
       <a href="#research">About</a>
+
       <span>|</span>
+
       <a href="#publications">Publications</a>
+
       <span>|</span>
+
       <a href="#skills">Skills</a>
+
       <span>|</span>
+
       <a href="#media">Media</a>
+
       <span>|</span>
+
       <a href="#contact">Contact</a>
+
     </nav>
+
   </header>
 
+
+
   <main>
+
 <section id="about" class="hero section">
+
   <div class="hero-inner">
+
     <p class="hero-text">
+
       <span class="hero-line">
+
         I’m Emily, a PhD student in Experimental Social Psychology, studying
+
       </span>
+
       <span class="hero-line">
+
         individuals’ willingness to exert effort.
+
       </span>
+
     </p>
 
+
+
     <div class="signature-wrap">
+
       <img
+
         src="assets/signature.png"
+
         alt="Emily Zohar signature"
+
         class="signature-img"
+
       />
+
     </div>
+
   </div>
+
 </section>
+
+
 
 <section id="contact" class="hero-contact-bar" aria-label="Quick links">
+
   <a href="mailto:emily.zohar@mail.utoronto.ca">emily.zohar@mail.utoronto.ca</a>
+
   <span>|</span>
+
   <a href="https://www.linkedin.com/in/emily-zohar" target="_blank" rel="noopener">LinkedIn</a>
+
   <span>|</span>
-  <a href="https://scholar.google.ca/citations?user=VHZdUoMAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a>
+
+  <a href="https://scholar.google.ca/citations?user=VHZdUoMAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener">Google Scholar</a>
+
   <span>|</span>
-  <a href="assets/cv.pdf" target="_blank" rel="noopener">CV</a>
+
+  <a href="https://docs.google.com/document/d/1yb7r_4m_5oEgvAtsl2Dl3WNBI9KYnYfwstbWicO4Ph0/edit?usp=sharing" class="peek-text" data-peek-kind="cv" data-peek-title="CV" data-peek-url="https://docs.google.com/document/d/1yb7r_4m_5oEgvAtsl2Dl3WNBI9KYnYfwstbWicO4Ph0/edit?usp=sharing">CV</a>
+
 </section>
+
+
 
  <section id="research" class="research section">
+
   <div class="content-wrap">
+
     <h1>About</h1>
 
+
+
     <div class="about-layout">
+
       <div class="about-text">
-        <p>
-          I am a PhD student in Experimental Social Psychology at the University of Toronto. 
-          My research focuses on the psychology of effort: how people perceive effort, when 
-          they avoid it, when they embrace it, and how social and technological contexts shape 
-          their willingness to do hard things.
-        </p>
 
         <p>
-          My work examines effort norms, effort normalization, mindsets about the negative 
-          feelings of effort, and the cues people use to judge effort in others. I also study 
-          how emerging technologies, including AI, may change how willing people are to think, 
-          persist, and work, as well as how everyday environments such as offices shape 
-          anticipated and objective productivity.
+
+          I am a PhD student in Experimental Social Psychology at the University of Toronto. 
+
+          My research focuses on the psychology of effort: how people perceive effort, when 
+
+          they avoid it, when they embrace it, and how social and technological contexts shape 
+
+          their willingness to do hard things.
+
         </p>
+
+
+
+        <p>
+
+          My work examines effort norms, effort normalization, mindsets about the negative 
+
+          feelings of effort, and the cues people use to judge effort in others. I also study 
+
+          how emerging technologies, including AI, may change how willing people are to think, 
+
+          persist, and work, as well as how everyday environments such as offices shape 
+
+          anticipated and objective productivity.
+
+        </p>
+
       </div>
+
+
 
       <article class="headshot-card">
+
         <img
+
           src="assets/headshot.jpg"
+
           alt="Headshot of Emily Zohar"
+
           class="headshot-img"
+
         />
+
       </article>
+
     </div>
+
   </div>
+
 </section>
+
+
 
     <section id="publications" class="publications section">
+
       <div class="content-wrap">
+
         <div class="section-heading-row">
+
           <h1>Recent Publications</h1>
+
           <p id="orcid-status" class="orcid-status"></p>
+
         </div>
+
+
 
         <div class="publication-carousel-shell">
+
           <button class="carousel-arrow left" id="pub-left" aria-label="Scroll publications left">
+
             ‹
+
           </button>
+
+
 
           <div class="publication-carousel" id="publication-carousel" tabindex="0">
+
             <!-- Publications are inserted by script.js -->
+
           </div>
 
+
+
           <button class="carousel-arrow right" id="pub-right" aria-label="Scroll publications right">
+
             ›
+
           </button>
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <section id="experience" class="experience section">
+
       <div class="content-wrap">
-        
+
         <div class="logo-row">
+
             <button
+
             class="logo-button"
+
              data-detail-id="uoft"
+
             data-modal-title="Work and Play Lab"
+
             data-modal-body="• PhD student researching effort willingness under the supervision of Michael Inzlicht."
+
             data-modal-role="PhD Student"
+
             data-modal-dates="2023-current"
+
             data-modal-link="https://michaelinzlicht.com/"
+
           >
+
             <img
+
               src="assets/uoft.png"
+
               alt="University of Toronto logo"
+
               onerror="this.style.display='none'; this.parentElement.querySelector('.logo-fallback').style.display='block';"
+
             />
+
             <span class="logo-fallback">University of Toronto</span>
+
           </button>    
 
-          <button
-            class="logo-button"
-             data-detail-id="beworks"
-            data-modal-title="BEworks"
-            data-modal-body="• Conducted literature reviews and evidence syntheses for consulting teams across private and public sector engagements.&#10;&#10;• Supported senior strategists and associates on think tank and client projects, translating behavioural science evidence into practical recommendations.&#10;&#10;• Designed and delivered MURAL-based digital workshops for internal and external clients; built and deployed surveys in Qualtrics.&#10;&#10;• Independently developed an Information Presentation Best Practices resource that was adopted organization-wide and considered for external commercialization."
-            data-modal-role="Consulting & Applied Behavioural Science Experience"
-            data-modal-dates="2022-2023"
-            data-modal-link="https://beworks.com/"
-          >
-            <img
-              src="assets/beworks.png"
-              alt="BEworks logo"
-              onerror="this.style.display='none'; this.parentElement.querySelector('.logo-fallback').style.display='block';"
-            />
-            <span class="logo-fallback">BEworks</span>
-          </button>
+
 
           <button
+
             class="logo-button"
-             data-detail-id="BCFG"
-            data-modal-title="Behavior Change for Good"
-            data-modal-body="• Led an arm of a large-scale, multi-year research initiative focused on designing interventions that change behaviour for the public good.&#10;&#10;• Designed intervention teaching first-year undergraduates how to use their calendars more effectively grounded in goal setting best practices theory.&#10;&#10;• The calendaring intervention was selected as the sole intervention included in the 2024 pilot."
-            data-modal-role="Mega Study"
-            data-modal-dates="2023-present"
-            data-modal-link="https://bcfg.wharton.upenn.edu/"
+
+             data-detail-id="beworks"
+
+            data-modal-title="BEworks"
+
+            data-modal-body="• Conducted literature reviews and evidence syntheses for consulting teams across private and public sector engagements.
+
+• Supported senior strategists and associates on think tank and client projects, translating behavioural science evidence into practical recommendations.
+
+• Designed and delivered MURAL-based digital workshops for internal and external clients; built and deployed surveys in Qualtrics.
+
+• Independently developed an Information Presentation Best Practices resource that was adopted organization-wide and considered for external commercialization."
+
+            data-modal-role="Consulting & Applied Behavioural Science Experience"
+
+            data-modal-dates="2022-2023"
+
+            data-modal-link="https://beworks.com/"
+
           >
+
             <img
-              src="assets/behavior-change-for-good.png"
-              alt="Behavior Change for Good logo"
+
+              src="assets/beworks.png"
+
+              alt="BEworks logo"
+
               onerror="this.style.display='none'; this.parentElement.querySelector('.logo-fallback').style.display='block';"
+
             />
-            <span class="logo-fallback">Behavior Change for Good</span>
+
+            <span class="logo-fallback">BEworks</span>
+
           </button>
-          
+
+
+
+          <button
+
+            class="logo-button"
+
+             data-detail-id="BCFG"
+
+            data-modal-title="Behavior Change for Good"
+
+            data-modal-body="• Led an arm of a large-scale, multi-year research initiative focused on designing interventions that change behaviour for the public good.
+
+• Designed intervention teaching first-year undergraduates how to use their calendars more effectively grounded in goal setting best practices theory.
+
+• The calendaring intervention was selected as the sole intervention included in the 2024 pilot."
+
+            data-modal-role="Mega Study"
+
+            data-modal-dates="2023-present"
+
+            data-modal-link="https://bcfg.wharton.upenn.edu/"
+
+          >
+
+            <img
+
+              src="assets/behavior-change-for-good.png"
+
+              alt="Behavior Change for Good logo"
+
+              onerror="this.style.display='none'; this.parentElement.querySelector('.logo-fallback').style.display='block';"
+
+            />
+
+            <span class="logo-fallback">Behavior Change for Good</span>
+
+          </button>
+
         </div>
+
       </div>
+
     </section>
+
 <section id="skills" class="skills section">
+
   <div class="content-wrap">
+
     <div class="skills-header">
+
       <h1>Skills</h1>
+
     </div>
+
+
 
     <div class="skills-grid">
+
       <article class="skill-card">
+
         <h2>Coding & Research Tools</h2>
+
         <p>
+
           R | JavaScript | jsPsych | Python | SQL | Git | Unix Shell | Qualtrics
+
         </p>
+
         <a href="assets/DSI.pdf" target="_blank" rel="noopener">
+
           Data Sciences Institute Certificate — University of Toronto
+
         </a>
-          
+
       </article>
 
+
+
       <article class="skill-card">
+
         <h2>Information Presentation</h2>
+
         <p>
-          Canva | PowerPoint | Wix | Squarespace | Notion
+
+          Canva | PowerPoint | Wix | Squarespace | Notion | HTML | CSS | JavaScript
+
         </p>
+
         <a href="assets/user-experience.pdf" target="_blank" rel="noopener">
+
           User Experience Research and Design Specialization — University of Michigan
+
         </a>
+
+        <button type="button" class="peek-button" data-peek-title="Omni" data-peek-body="Conceptualized and created a website to track and discover interests (TV, movies, restaurants, books, events, and more)." data-peek-url="https://emilyzohar.github.io/omni/">Omni</button>
+
+        <button type="button" class="peek-button" data-peek-title="SPRG" data-peek-body="Redesigned the Social Personality Research Group website." data-peek-url="https://www.sprgtoronto.ca/">SPRG</button>
+
+        <button type="button" class="peek-button" data-peek-title="Family Website" data-peek-body="Creadted a website for my family to memorlize trips, recipes, and memories. With a user friendly design to view and add content." data-peek-url="https://www.zoharfamily.ca/">Family Website</button>
+
       </article>
 
+
+
       <article class="skill-card">
+
         <h2>Teaching</h2>
+
         <p>
+
           Judgment & Decision-Making | Intro to Social Psychology | Methods in 
+
           Psychological Science | Social Psychology Lab | Social Cognition
+
         </p>
+
         <a href="assets/Nudges.pdf" target="_blank" rel="noopener">
+
           Lecture on Nudges
+
         </a>
+
       </article>
 
+
+
       <article class="skill-card">
+
         <h2>Outreach & Service</h2>
+
         <p>
+
           Social Personality Research Group Coordinator | UofT Chief Presiding Officer | 
+
           Psychology Graduate Association Social Media & Orientation Coordinator
+
         </p>
+
       </article>
+
+
+
     </div>
+
   </div>
+
 </section>
 
+
+
 <section id="media" class="media section">
+
   <div class="content-wrap">
+
     <h1>Media Coverage</h1>
 
 
+
+
+
     <div class="media-carousel-shell">
+
       <button class="media-arrow left" id="media-left" aria-label="Scroll media left">
+
         ‹
+
       </button>
+
+
 
       <div class="media-tile-grid" id="media-carousel">
+
         <a
+
           class="media-tile media-tile-authored"
+
           href="https://spsp.org/news/character-and-context-blog/zohar-inzlicht-laziness-effort-contagion"
+
           target="_blank"
+
           rel="noopener"
+
         >
+
           <span class="media-label">Authored piece</span>
+
           <span class="media-title">Is laziness contagious?</span>
+
           <span class="media-authors">Emily Zohar & Michael Inzlicht</span>
+
           <span class="media-source">SPSP Character & Context Blog</span>
+
           <span class="media-year">2026</span>
+
         </a>
 
+
+
         <a
+
           class="media-tile"
+
           href="https://spectrum.ieee.org/frictionless-ai-psychology"
+
           target="_blank"
+
           rel="noopener"
+
         >
+
           <span class="media-title">What Happens If AI Makes Things Too Easy for Us?</span>
+
           <span class="media-source">IEEE Spectrum</span>
+
           <span class="media-year">2026</span>
+
         </a>
 
+
+
         <a
+
           class="media-tile"
+
           href="https://www.artsci.utoronto.ca/news/are-workers-more-productive-beautiful-spaces"
+
           target="_blank"
+
           rel="noopener"
+
         >
+
           <span class="media-title">Are workers more productive in beautiful spaces?</span>
+
           <span class="media-source">UofT Faculty of Arts & Science</span>
+
           <span class="media-year">2026</span>
+
         </a>
 
+
+
         <a
+
           class="media-tile"
+
           href="https://www.sciencenews.org/article/ai-removes-friction-effort-balance-good"
+
           target="_blank"
+
           rel="noopener"
+
         >
+
           <span class="media-title">AI can take the friction out of life, but some effort can be good</span>
+
           <span class="media-source">Science News</span>
+
           <span class="media-year">2026</span>
+
         </a>
 
 
+
+
+
         <a
+
           class="media-tile"
+
           href="https://phys.org/news/2026-02-frictionless-ai-human-growth.html"
+
           target="_blank"
+
           rel="noopener"
+
         >
+
           <span class="media-title">Frictionless AI comes at a human cost to learning, growth and connection</span>
+
           <span class="media-source">Phys.org</span>
+
           <span class="media-year">2026</span>
+
         </a>
+
+
+
 
 
         <a
+
           class="media-tile"
+
           href=""
+
           target="_blank"
+
           rel="noopener"
+
         >
+
           <span class="media-title">Do lazy workers influence their colleagues to slack off?</span>
+
           <span class="media-source">Rotman Insights Hub</span>
+
           <span class="media-year">2026</span>
+
         </a>
+
       </div>
 
+
+
       <button class="media-arrow right" id="media-right" aria-label="Scroll media right">
+
         ›
+
       </button>
+
     </div>
+
   </div>
+
 </section>
 
-  
+
+
   </main>
 
+
+
   <footer class="site-footer">
+
     <p>© <span id="year"></span> Emily Zohar</p>
+
   </footer>
 
+
+
   <div class="modal-backdrop" id="modal-backdrop" hidden>
+
     <div
+
       class="modal"
+
       role="dialog"
+
       aria-modal="true"
+
       aria-labelledby="modal-title"
+
       aria-describedby="modal-body"
+
     >
+
       <button class="modal-close" id="modal-close" aria-label="Close popup">×</button>
+
       <p class="modal-role" id="modal-role"></p>
+
       <h1 id="modal-title"></h1>
+
       <p class="modal-dates" id="modal-dates"></p>
+
       <p id="modal-body"></p>
+
       <a id="modal-link" href="#" target="_blank" rel="noopener" hidden>Visit website</a>
+
     </div>
+
   </div>
 
+
+
   <script src="script.js"></script>
+
+
+<style>
+.peek-button, .peek-action {
+  display:inline-flex; align-items:center; justify-content:center; gap:.45rem;
+  padding:.65rem 1rem; margin:.3rem .3rem .3rem 0; border:1px solid #adbfdc;
+  border-radius:8px; background:#adbfdc; color:#253129 !important;
+  font:inherit; font-size:.95rem; line-height:1.35; text-decoration:none !important;
+  cursor:pointer; transition:background .15s;
+}
+.peek-button:hover,.peek-action:hover {background:#9bafcf;}
+.peek-button:focus-visible,.peek-action:focus-visible,.peek-close:focus-visible {outline:3px solid #b49358;outline-offset:3px;}
+.peek-text {color:inherit;text-decoration:underline;cursor:pointer;}
+#peek-open.peek-text {display:inline-block;margin-top:.8rem;}
+#peek-dialog {width:min(920px,calc(100vw - 32px));max-height:90dvh;box-sizing:border-box;border:0;border-radius:16px;padding:1.5rem;color:#253129;background:#fff;box-shadow:0 24px 80px #0004;}
+#peek-dialog::backdrop {background:#0008;}
+#peek-dialog h2 {margin:0 3rem .75rem 0;font-size:1.7rem;}
+.peek-close {position:absolute;right:1rem;top:.7rem;border:0;background:transparent;font:inherit;font-size:2rem;cursor:pointer;color:inherit;}
+#peek-description {white-space:pre-line;line-height:1.65;}
+#peek-meta {opacity:.75;margin:0 0 .5rem;}
+#peek-preview iframe {width:100%;height:65dvh;border:1px solid #ddd;border-radius:8px;background:#f4f4f4;}
+.peek-note {font-size:.9rem;line-height:1.5;color:#59635c;}
+body.peek-open {overflow:hidden;}
+</style>
+<dialog id="peek-dialog" aria-labelledby="peek-title">
+  <button type="button" class="peek-close" aria-label="Close preview">×</button>
+  <p id="peek-meta" hidden></p>
+  <h2 id="peek-title"></h2>
+  <p id="peek-description"></p>
+  <div id="peek-preview"></div>
+  <p id="peek-note" class="peek-note" hidden></p>
+  <a id="peek-open" class="peek-action" target="_blank" rel="noopener noreferrer">View website ↗</a>
+</dialog>
+<script>
+(() => {
+  const dialog = document.getElementById('peek-dialog');
+  const title = document.getElementById('peek-title');
+  const description = document.getElementById('peek-description');
+  const meta = document.getElementById('peek-meta');
+  const preview = document.getElementById('peek-preview');
+  const note = document.getElementById('peek-note');
+  const open = document.getElementById('peek-open');
+  // For the most reliable PDF preview, upload your exported CV to assets/CV.pdf
+  // and replace the empty string below with 'assets/CV.pdf'.
+  const LOCAL_CV_PDF = '';
+  let trigger;
+  function safeURL(value) {
+    const url = new URL(value, document.baseURI);
+    if (!['https:', 'http:'].includes(url.protocol)) throw new Error('Unsupported link');
+    return url.href;
+  }
+  document.addEventListener('click', event => {
+    const button = event.target.closest('.peek-button, .peek-text[data-peek-kind], .logo-button[data-modal-title]');
+    if (!button) return;
+    // Intercept before legacy popup listeners so a click opens just one dialog.
+    event.preventDefault(); event.stopImmediatePropagation();
+    trigger = button;
+    const data = button.dataset;
+    title.textContent = data.peekTitle || data.modalTitle;
+    description.textContent = data.peekBody || data.modalBody || '';
+    description.hidden = !description.textContent;
+    open.className = 'peek-action';
+    meta.textContent = [data.modalRole, data.modalDates].filter(Boolean).join(' · ');
+    meta.hidden = !meta.textContent;
+    preview.replaceChildren(); note.hidden = true;
+    const link = data.peekUrl || data.modalLink;
+    open.hidden = !link;
+    if (link) open.href = safeURL(link);
+    open.textContent = 'View website ↗';
+    if (data.peekKind === 'cv') {
+      description.textContent = '';
+      description.hidden = true;
+      open.className = 'peek-text';
+      const docID = '1yb7r_4m_5oEgvAtsl2Dl3WNBI9KYnYfwstbWicO4Ph0';
+      const exportURL = `https://docs.google.com/document/d/${docID}/export?format=pdf`;
+      const pdfURL = LOCAL_CV_PDF ? safeURL(LOCAL_CV_PDF) : exportURL;
+      const frame = document.createElement('iframe');
+      frame.title = 'Emily Zohar CV PDF preview';
+      frame.src = LOCAL_CV_PDF ? pdfURL : `https://docs.google.com/gview?embedded=true&url=${encodeURIComponent(pdfURL)}`;
+      preview.append(frame);
+      open.href = pdfURL;
+      open.textContent = 'Open in new tab ↗';
+    }
+    dialog.showModal(); document.body.classList.add('peek-open');
+  }, true);
+  dialog.querySelector('.peek-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => {
+    if (event.target !== dialog) return;
+    const r = dialog.getBoundingClientRect();
+    if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close();
+  });
+  dialog.addEventListener('close', () => {
+    preview.replaceChildren(); document.body.classList.remove('peek-open');
+    trigger?.focus();
+  });
+})();
+</script>
+
 </body>
+
 </html>
